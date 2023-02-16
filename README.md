@@ -5,9 +5,8 @@ const [number, setNumber] = useState(0);을 사용해 <br/>
 onClick을 이용해 <br/>
 
 - 버튼을 누르면 1씩 숫자가 증가하게 => setNumber(number + 1) <br/>
-
-* 버튼을 누르면 1씩 숫자가 감소하게 => setNumber(number - 1) <br/>
-  reset버튼을 누르면 초기값인(0)으로 돌아가게 => setNumber(0) <br/>
+- 버튼을 누르면 1씩 숫자가 감소하게 => setNumber(number - 1) <br/>
+- reset버튼을 누르면 초기값인(0)으로 돌아가게 => setNumber(0) <br/>
   만들어봤습니다. <br/>
 
 ### State 란?

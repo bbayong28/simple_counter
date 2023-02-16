@@ -1,71 +1,26 @@
-# Getting Started with Create React App
+# useState로 만든 simple_counter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+const [number, setNumber] = useState(0);을 사용해 <br/>
+초기값은 숫자 0으로 시작하고 <br/>
+onClick을 이용해 <br/>
 
-## Available Scripts
+- 버튼을 누르면 1씩 숫자가 증가하게 => setNumber(number + 1) <br/>
 
-In the project directory, you can run:
+* 버튼을 누르면 1씩 숫자가 감소하게 => setNumber(number - 1) <br/>
+  reset버튼을 누르면 초기값인(0)으로 돌아가게 => setNumber(0) <br/>
+  만들어봤습니다. <br/>
 
-### `npm start`
+### State 란?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 컴포넌트의 내부의 변화하는 값
+- 특정 상황이나 시점에 따라 달라질 수 있는 값은 state로 만들어서 처리해줘야함
+- ex) counter 수, input 태그의 value 값...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### useState란?
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# simple_counter
+- 컴포넌트에서 State(상태)를 다룰 때 사용하는 함수
+- const [state, setState] = useState("초기값"); 형태를 띔
+- 0번째 index에는 state값, 1번째 index에는 state를 업데이트 할 때 사용하는 함수(setter)
+- useState함수의 인자에는 state의 초기값으로 세팅해줄 값을 넣어주면 됨
+- state값은 반드시 setter 함수로만 변경가능
+- setter 함수는 state이름 앞에 "set"을 붙여서 작성하는 것이 일반적
